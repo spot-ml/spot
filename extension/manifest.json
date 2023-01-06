@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "Text Field Logger",
+    "version": "1.0",
+    "description": "Identifies text fields on a webpage and stores the values written in text boxes to a file",
+    "browser_action": {
+      "default_title": "Text Field Logger",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "activeTab",
+      "downloads"
+    ]
+  }
+  
