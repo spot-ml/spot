@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      /* Add some style to your popup */
-    </style>
-  </head>
-  <body>
-    <!-- Add a button for the user to click to start logging text field values -->
-    <button id="start-logging-button">Start Logging</button>
-    <script src="popup.js"></script>
-  </body>
+<head>
+    <title>Text Retriever Popup</title>
+</head>
+<body>
+    <h1>Text Retriever</h1>
+    <div id="text-container"></div>
+    <script>
+        // This code will run as soon as the popup is opened
+        chrome.runtime.sendMessage({ action: "getText" }, (response) => {
+            let textContainer = document.getElementById("text-container");
+            for (let i = 0; i < response.texts.length; i++) {
+                let text = document.createElement("p");
+                text.innerText = response.texts[i];
+                textContainer.appendChild(text);
+            }
+        });
+    </script>
+</body>
 </html>

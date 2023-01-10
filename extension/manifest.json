@@ -1,15 +1,24 @@
 {
-    "manifest_version": 2,
-    "name": "Text Field Logger",
-    "version": "1.0",
-    "description": "Identifies text fields on a webpage and stores the values written in text boxes to a file",
-    "browser_action": {
-      "default_title": "Text Field Logger",
-      "default_popup": "popup.html"
-    },
-    "permissions": [
+  "manifest_version": 3,
+  "name": "Text Retriever",
+  "version": "1.0",
+  "permissions": [
+      "tabs",
       "activeTab",
-      "downloads"
-    ]
+      "storage",
+      "http://*/*",
+      "https://*/*"
+  ],
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+  },
+  "content_scripts": [
+  {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+  }],
+  "browser_action": {
+      "default_popup": "popup.html"
   }
-  
+}
