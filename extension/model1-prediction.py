@@ -2,6 +2,7 @@ import pickle
 
 # save the model
 filename = 'logistic_regression_model.sav'
+# lrm is model name (logistic regression model)
 pickle.dump(lrm, open(filename, 'wb'))
 
 # load the model
