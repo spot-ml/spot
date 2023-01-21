@@ -1,13 +1,13 @@
 import torch
 
 # saving the model
-torch.save(model.state_dict(), 'trained_model3.pth')
+torch.save(model.state_dict(), 'MLP_model.pth')
 
 # prediction function
 def predict_sexism(x):
   x = tfidfvectorizer.transform([x]).toarray()
   x = torch.tensor(x, dtype=torch.float64)
-  model.load_state_dict(torch.load('trained_model3.pth'))
+  model.load_state_dict(torch.load('MLP_model.pth'))
   pred = model(x_in=x.float().to(device))
   y_1 = (pred).to('cpu').detach().numpy()
   ind=(y_1).argmax(axis = 1)
@@ -20,6 +20,6 @@ def predict_sexism(x):
   return y_1
 
 # testing
-t1 = "women are weak and inferior"
-test_pred=predict_sexism(t1)
+text = "women are weak and inferior"
+test_pred=predict_sexism(text)
 print(test_pred)
