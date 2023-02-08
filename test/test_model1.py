@@ -1,6 +1,6 @@
 import pickle
 import sys
-util_path = './utils'
+util_path = './models/utils'
 sys.path.insert(0, util_path)
 import util
 from sklearn.feature_extraction.text import TfidfVectorizer
