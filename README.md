@@ -31,3 +31,11 @@ This project aims to battle online hate speech. Through this project we can suce
 - Create a feature branch, preferably with the name `feature/<small-description>` and commit your features into it.
 - Create a merge request to push code from your feature branch into `main` branch which will be reviewed.
 - Once the code is reviewed and approved by atleast one developer, it would be merged to `main`.
+
+## Limitation
+- We have used the conventional and MLP classifier to detect the sexist text. This could be further developed using state-of-the-art pre-trained language models like BERT, mt5, etc. for text classification.
+- We have trained the models on the english language datasets. It could be extended to deal with multilingual and code-mixed data.
+
+## Future Scope
+- A simple browser extension can be built with this model as the backbone and can warn users when they are writing sexist content.
+
