@@ -1,6 +1,6 @@
 # spot
 
-Project SPOT: Sexist Profane Offensive Texts Detection
+Project SPOT: Sexist Profane Offensive Text Detection
 
 ## Aim
 
